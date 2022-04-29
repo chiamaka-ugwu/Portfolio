@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #f8f8f8;
+    color: #DE3163;
+}
+
+
+
+/* NAV */
+nav{
+    height: 3rem;
+    padding-top: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+}
+nav h1{
+    display: inline;
+    margin-left: 3rem;
+    font-weight: 500;
+}
+nav svg{
+    display: none;
+}
+nav #close{
+    display: none;
+}
+nav ul{
+    float: right;
+    margin-right: 6rem;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+}
+nav ul li a{
+    color: #DE3163;
+    text-decoration: none;
+    margin-right: 3rem;
+}
+
+nav ul li a:hover, a.active{
+    padding: 10px 20px;
+    border: 1px solid #DE3163;
+    border-radius: 10px;
+}
+
+
+
+/* ABOUT */
+.about{
+    width: 100%;
+    padding-top: 5rem;
+}
+.about h1{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.about p{
+    color: #111;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+/* PROJECTS */
+.projects{
+    width: 100%;
+    padding-top: 5rem;
+}
+.projects .code-icon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+.projects .code-icon i{
+    font-size: 30px;
+    color: #999;
+}
+.projects .code-icon i:hover{
+    color: #DE3163;
+}
+.projects h1{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.projects .body{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.projects .body .box{
+    width: 35%;
+    height: 17rem;
+    margin: 2rem;
+    background-color: white;
+    border: 1px solid rgba(220, 226, 238, 0.71);
+    box-sizing: border-box;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.projects .body .box:hover{
+    border-bottom: 5px solid #DE3163;
+}
+.projects .body .box a{
+    width: 100%;  
+}
+.projects .body .box a img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    border-bottom: 2px solid rgba(220, 226, 238, 0.71) ;
+}
+.projects .body .box h2{
+    margin-top: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.more{
+    display: flex;
+}
+.more h3{
+    font-weight: 600;
+}
+.icon{
+    margin: 1rem;
+}
+.text{
+    margin-top: 1rem;
+}
+.text a{
+    display: block;
+    margin-top: 1rem;
+    color: #999;
+}
+.text a:hover{
+    color: #DE3163;
+}
+
+
+
+/* CONTACT */
+.contact{
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contact .contact-icon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+.contact .contact-icon i{
+    font-size: 30px;
+    color: #999;
+}
+.contact .contact-icon i:hover{
+    color: #DE3163;
+
+}
+.contact h1{
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+.contact .box{
+    width: 40%;
+    height: auto;
+    margin-bottom: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.contact a{
+    color: #999;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.contact a:hover{
+    color: #DE3163;
+    text-decoration: underline;
+}
+.contact form{
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.contact form input{
+    margin-bottom: 1.5rem;
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    font-size: 1rem;
+}
+.contact form input:hover{
+    border: 1px solid #DE3163;
+}
+.contact form input#submit{
+    margin-top: 2rem;
+    width: 20%;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid #DE3163;
+    border-radius: 15px;
+}
+.contact form input#submit:hover{
+    background-color: #de316270;
+    color: white;
+}
+
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 10rem;
+    margin-top: 5rem;
+    border-top: 1px solid #999;
+}
+footer .icons{
+    text-align: center;
+}
+footer .icons i{
+    margin: 2rem;
+    font-size: 30px;
+    color: #111;
+    /* color: #999; */
+}
+footer .icons i:hover{
+    color: #DE3163;
+}
+footer .credits p{
+    color: #111;
+    text-align: center;
+}
+footer .credits a{
+    color: #DE3163;
+}
+
+
+
+
+
+/* MEDIA QUERY >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media screen and (max-width: 1000px){
+    nav{
+        width: 100%;
+        padding-top: 1.5rem;
+        display: flex;
+        transition: all 1s;
+        
+    } 
+    nav h1{
+        margin-left: 1.5rem;
+        z-index: 100;
+    }
+    nav svg{
+        display: block;
+        margin-left: 3.7rem;
+        margin-top: -1.3rem;
+    }
+    nav #close{
+        display: none;
+        font-size: 30px;
+        margin-left: 3.7rem;
+        z-index: 100;
+    }
+    nav ul{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: -5rem;
+        padding-top: 8rem;
+        margin-right: 0;
+        float: none;
+        margin-top: 5rem;
+        background-color: white;
+        right: -100%;
+        text-align: center;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    nav ul li a{
+        color: #999;
+        margin-right: 0;
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        font-weight: 600;
+    }
+    nav ul li a:hover, a.active{
+        border: 1px solid #DE3163;
+    }
+
+
+    /* ABOUT MOBILE */
+    .about{
+        margin-top: 5rem;
+    }
+    .about p{
+        width: 85%;
+        font-size: 1.2rem;
+    }
+
+
+    /* PROJECTS MOBILE */
+    .projects .body{
+        width: 100%;
+    }
+    .projects .body .box{
+        width: 85%;
+        height: 13rem;
+        margin: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .projects .body .box a{
+        width: 100%;
+    }
+    .projects .body .box a img{
+        width: 100%;
+    }
+    
+
+
+    /* CONTACT MOBILE */
+    .contact .box{
+        width: 85%;
+    }
+    .contact a{
+        margin-left: -0.5rem;
+        font-size: 1.05rem;
+    }
+    .contact form{
+        width: 85%;
+    }
+    .contact form input#submit{
+        margin-top: 0.5rem;
+        width: 30%;
+    }
+
+
+
+    /* FOOTER MOBILE */
+    footer .icons{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    footer .icons i{
+        margin: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
