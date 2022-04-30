@@ -3,9 +3,22 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 body{
     background-color: #f8f8f8;
     color: #DE3163;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #DE3163;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f8f8f8;
 }
 
 
@@ -14,7 +27,7 @@ body{
 nav{
     height: 3rem;
     padding-top: 1rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 100000;
 }
@@ -32,6 +45,7 @@ nav #close{
 nav ul{
     float: right;
     margin-right: 6rem;
+    margin-top: 0.5rem;
 }
 nav ul li{
     display: inline;
@@ -41,6 +55,7 @@ nav ul li a{
     color: #DE3163;
     text-decoration: none;
     margin-right: 3rem;
+
 }
 
 nav ul li a:hover, a.active{
@@ -70,8 +85,6 @@ nav ul li a:hover, a.active{
     line-height: 1.5;
     margin-bottom: 2rem;
 }
-
-
 
 
 
@@ -109,46 +122,84 @@ nav ul li a:hover, a.active{
 }
 .projects .body .box{
     width: 35%;
-    height: 17rem;
+    height: 19rem;
     margin: 2rem;
     background-color: white;
     border: 1px solid rgba(220, 226, 238, 0.71);
     box-sizing: border-box;
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align: center;
 }
 .projects .body .box:hover{
     border-bottom: 5px solid #DE3163;
 }
 .projects .body .box a{
     width: 100%;  
+    
 }
 .projects .body .box a img{
     border-radius: 10px 10px 0 0;
     width: 100%;
-    border-bottom: 2px solid rgba(220, 226, 238, 0.71) ;
+    border-bottom: 2px solid rgba(220, 226, 238, 0.71);
 }
+
 .projects .body .box h2{
     margin-top: 0.5rem;
     font-weight: 600;
-    text-align: center;
+}
+.projects .body .box p{
+    color: #999;
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5rem;
 }
 .more{
     display: flex;
+    cursor: pointer;
 }
 .more h3{
     font-weight: 600;
+    text-align: left;
 }
 .icon{
     margin: 1rem;
 }
+.icon img{
+    transition: transform 0.5s ease-in;
+}
 .text{
     margin-top: 1rem;
+}
+.more.active .icon img{
+    transform: rotate(180deg);
+}
+.text ul{
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: max-height 0.8s ease;
+}
+.text.active ul{
+    max-height: 12rem;
+    animation: fade 1s ease-in-out;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .text a{
     display: block;
     margin-top: 1rem;
     color: #999;
+    text-align: left;
 }
 .text a:hover{
     color: #DE3163;
@@ -268,7 +319,19 @@ footer .credits p{
 footer .credits a{
     color: #DE3163;
 }
-
+#button{
+    display: none;
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #DE3163;
+    color: white;
+    cursor: pointer;
+    padding: 0.7rem;
+    border-radius: 4px;
+}
 
 
 
@@ -279,8 +342,10 @@ footer .credits a{
         width: 100%;
         padding-top: 1.5rem;
         display: flex;
+        justify-content: space-between;
         transition: all 1s;
-        
+        position: fixed;
+
     } 
     nav h1{
         margin-left: 1.5rem;
@@ -288,13 +353,13 @@ footer .credits a{
     }
     nav svg{
         display: block;
-        margin-left: 3.7rem;
+        margin-right: 1.5rem;
         margin-top: -1.3rem;
     }
     nav #close{
         display: none;
         font-size: 30px;
-        margin-left: 3.7rem;
+        margin-right: 1.5rem;
         z-index: 100;
     }
     nav ul{
@@ -345,7 +410,7 @@ footer .credits a{
     }
     .projects .body .box{
         width: 85%;
-        height: 13rem;
+        height: 16rem;
         margin: 1.5rem;
         margin-bottom: 2rem;
     }
@@ -355,7 +420,7 @@ footer .credits a{
     .projects .body .box a img{
         width: 100%;
     }
-    
+
 
 
     /* CONTACT MOBILE */
@@ -382,7 +447,7 @@ footer .credits a{
         margin-bottom: 2rem;
     }
     footer .icons i{
-        margin: 1rem;
+        margin: 0.8rem;
     }
 
 
