@@ -6,6 +6,25 @@ const navs = document.querySelectorAll(".nav");
 const button = document.getElementById("button");
 
 
+
+const active = window.matchMedia("(min-width: 1100px)");
+if( active.matches){
+    for (var i = 0; i < navs.length; i++) {
+        navs[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) { 
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+        });
+      }
+}
+
+
+
+
+
+
 // onscroll, navbar effects, scroll button
 window.onscroll = function(){
     var top = window.scrollY;
