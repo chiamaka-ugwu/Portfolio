@@ -406,10 +406,10 @@ footer .credits a{
         margin-left: 1.5rem;
         z-index: 100;
     }
-    nav svg{
+    nav .menu-icon{
         display: block;
         margin-right: 1.5rem;
-        margin-top: -1.3rem;
+        font-size: 25px;
     }
     nav #close{
         display: none;
