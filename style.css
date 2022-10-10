@@ -36,7 +36,7 @@ nav h1{
     margin-left: 3rem;
     font-weight: 500;
 }
-nav svg{
+.menu-icon{
     display: none;
 }
 nav #close{
